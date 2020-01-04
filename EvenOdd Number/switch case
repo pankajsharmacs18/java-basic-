@@ -1,0 +1,26 @@
+package evenOdd;
+import java.util.Scanner;
+
+public class EvenOdd {
+    public static void main(String args[]) {
+        System.out.println("Enter number of month ");
+        Scanner input = new Scanner(System.in);
+        int num = input.nextInt();
+        switch (num%2) {
+
+            case 0: {
+                System.out.println("num is Even : " + num);
+                break;
+            }
+            case 1: {
+                System.out.println("num is Odd :" + num);
+                break;
+            }
+            default: {
+                System.out.println("wrong input " + num);
+            }
+        }
+
+    }
+
+}

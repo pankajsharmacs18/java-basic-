@@ -1,0 +1,42 @@
+package grade;
+
+import java.util.Scanner;
+
+public class Grade {
+    public static void main(String args[])
+    {
+                Scanner input = new Scanner(System.in);
+                System.out.println("enter a number");
+                int Mark  = input.nextInt();
+                if (Mark>=40&& Mark<=50){
+
+                    System.out.println("Got gread D: and mark is "+Mark);
+
+                }
+                else if (Mark >50 && Mark<=60){
+                    System.out.println("got geard C : with mark :"+Mark);
+                }
+                else if(Mark >60 && Mark<=70){
+                    System.out.println("Got gread B : and eith mark :"+Mark);
+                }
+                else if (Mark>70 && Mark<=80){
+                    System.out.println("Got read A : and with mark : "+Mark);
+                }
+                else if (Mark > 80  &&  Mark <= 90 ){
+                    System.out.println("Got Gread A : and  With Mark : "+Mark);
+                }
+                else if(Mark > 90 && Mark <=100) {
+                    System.out.println("Got Grade O : and with mark:" + Mark);
+                }
+                else if (Mark >100){
+                    System.out.println("Entry wrong ");
+
+                    }
+                else {
+                    System.out.println("Falied got leadd then 40 " +Mark);
+                }
+                }
+
+
+            }
+

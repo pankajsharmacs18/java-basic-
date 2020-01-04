@@ -1,0 +1,16 @@
+package pattern;
+import java.util.Scanner;
+
+ublic class ReversedPyramid {  
+public static void main(String[] args) {  
+  Scaner input = new Scanner(System.in);
+  Sytem.out.println("enter range of line ");
+  int range = input.nextInt();
+for(int i=1;i<=range;i++){  
+for(int j=range;j>=i;j--){  
+        System.out.print("* ");  
+}  
+System.out.println();//new line  
+}  
+}  
+}  

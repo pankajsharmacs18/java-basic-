@@ -1,0 +1,23 @@
+package fibonacci;
+
+
+import java.util.Scanner;
+
+public class fibonacciSeries{
+    public static void main(String args[])
+    {
+        int num1=0,num2=1,num3=0;
+        Scanner input = new Scanner(System.in);
+        int range=0;
+        System.out.println("Enter count");
+        range = input.nextInt();
+        System.out.println("fibinacci sereis are there" +num1+" "+num2);
+        for (int i = 2; i <=range ; i++) {
+            num3= num1 +num2;
+            System.out.print(" "+num3);
+            num1 = num2;
+            num2 =num3;
+        }
+
+    }
+}

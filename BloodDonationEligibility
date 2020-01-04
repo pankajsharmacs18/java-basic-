@@ -1,0 +1,19 @@
+package bloodCondition;
+import java.util.Scanner;
+public class BloodCondition {      
+public static void main(String[] args) {      
+    Scanner input = newScaner(System.in);
+    System.out.println("Enter age");
+    int age = input.nextInt();
+    System.out.println("Enter weight of person");
+    float weight = input.nextFloat();
+     if(age>=18){      
+        if(weight>50){    
+            System.out.println("You are eligible to donate blood bcoz your age is: "+age+"and weight is : "+weight);    
+        } else{  
+            System.out.println("You are not eligible to donate blood");    
+        }  
+    } else{  
+      System.out.println("Age must be greater than 18");  
+    }  
+}  }  

@@ -1,0 +1,14 @@
+package riv;
+
+import java.util.Scanner;
+
+public class Riv {
+    public static void main(String... args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("enter a number");
+        int num   = input.nextInt();
+        String output = (num%2==0)?"even num "+num:"odd num"+num;
+        System.out.println(output);
+
+    }
+}

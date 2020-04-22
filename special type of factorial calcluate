@@ -1,0 +1,19 @@
+package heapSort;
+
+import java.util.Scanner;
+
+public class HeapMain {
+    public int  fact(int n)
+    {
+        return (n<=1)?1:n*fact(n-1);
+    }
+    public static void main(String... PankajSharma)
+    {
+        HeapMain obj=new HeapMain();
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter no to be calculate factorial : ");
+        int n=sc.nextInt();
+        System.out.println("factorial is : "+obj.fact(n));
+        System.out.println("Pankaj sharma : ");
+    }
+}

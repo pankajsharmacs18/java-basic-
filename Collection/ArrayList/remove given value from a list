@@ -1,0 +1,48 @@
+package collection;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.Scanner;
+
+class CollImplement
+{
+    ArrayList<Integer> lst=new ArrayList<Integer>();
+    Scanner sc=new Scanner(System.in);
+    public void inserEleement()
+    {int chose=0;
+        do{
+            System.out.println("enter valur to be inserted  :");
+            lst.add(sc.nextInt());
+            System.out.println("Enter 1 for more value : ");
+            chose=sc.nextInt();
+        }while (chose==1);
+
+    }
+    public void display()
+    {
+        Iterator itr=lst.iterator();
+        while (itr.hasNext())
+        {
+            System.out.print(itr.next()+"  ");
+        }
+    }
+    public void removeElement(int value)
+    {
+        lst.remove(lst.get(value)-2);
+    }
+}
+public class CollMain
+{
+    public static void main(String... PankajSahrma)
+    {
+        Scanner sc=new Scanner(System.in);
+        CollImplement obj=new CollImplement();
+        obj.inserEleement();
+        obj.display();
+        System.out.println("\n Enter position of element to be deleted  :\n ");
+        obj.removeElement(sc.nextInt());
+        obj.display();
+        System.out.println("Pankaj Sharma: ");
+    }
+}

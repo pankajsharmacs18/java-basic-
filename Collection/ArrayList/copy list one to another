@@ -1,0 +1,63 @@
+package collection;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.Scanner;
+
+class CollImplement
+{
+    ArrayList<Integer> lst=new ArrayList<Integer>();
+    Scanner sc=new Scanner(System.in);
+    public void inserEleement()
+    {int chose=0;
+        do{
+            System.out.println("enter valur to be inserted  :");
+            lst.add(sc.nextInt());
+            System.out.println("Enter 1 for more value : ");
+            chose=sc.nextInt();
+        }while (chose==1);
+
+    }
+    public void display()
+    {
+        Iterator itr=lst.iterator();
+        while (itr.hasNext())
+        {
+            System.out.print(itr.next()+"  ");
+        }
+    }
+    ArrayList<Integer> lst1=new ArrayList<Integer>();
+   public void copyList()
+   {
+       for(int i:lst)
+       {
+           lst1.add(i);
+       }
+   }
+   public void display1()
+   {
+       Iterator itr=lst1.iterator();
+
+       while (itr.hasNext())
+       {
+           System.out.print(itr.next()+ " ");
+       }
+   }
+
+}
+public class CollMain
+{
+    public static void main(String... PankajSahrma)
+    {
+        Scanner sc=new Scanner(System.in);
+        CollImplement obj=new CollImplement();
+        obj.inserEleement();
+        obj.display();
+        obj.copyList();
+
+        System.out.println("\n after copy secound list is  :\n ");
+        obj.display1();
+        System.out.println("Pankaj Sharma: ");
+    }
+}

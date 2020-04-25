@@ -1,0 +1,50 @@
+package collection;
+
+import java.util.LinkedList;
+import java.util.Scanner;
+
+class LISTimplement
+{
+    Scanner sc=new Scanner(System.in);
+    LinkedList<Integer> lst=new LinkedList<Integer>();
+    public void insertElement()
+    {
+        int chose=0;
+        do {
+            System.out.println("enter value to inserted : ");
+            lst.add(sc.nextInt());
+            System.out.println("enter 1 for more element : ");
+                chose=sc.nextInt();
+        }while (chose==1);
+    }
+    public void display()
+    {
+        for (int i :lst)
+        {
+            System.out.print(i+" ");
+        }
+
+    }
+    public void swapFirstAndLast()
+    {
+        int temp=lst.get(0);
+        lst.set(0,lst.get(lst.size()-1));
+        lst.set(lst.size()-1,temp);
+
+    }
+
+}
+public class CollecMain
+{
+    public static void main(String... PankajSharma)
+    {
+        LISTimplement obj=new LISTimplement();
+        obj.insertElement();
+        obj.display();
+        System.out.println("After remove all element :  : \n ");
+        obj.swapFirstAndLast();
+        obj.display();
+        System.out.println("Pankaj Sharma  : ");
+    }
+
+}

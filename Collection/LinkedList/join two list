@@ -1,0 +1,54 @@
+package collection;
+
+import java.util.LinkedList;
+import java.util.Scanner;
+
+class ListImple
+{
+    Scanner sc=new Scanner(System.in);
+    public void insert(LinkedList<Integer> lst)
+    {
+
+        System.out.println("Enter value in  list :\n  ");
+        int chose=0;
+        do {
+            System.out.println("enter value to be insertes :  ");
+            lst.add(sc.nextInt());
+            System.out.println("Enter 1 for more : ");
+            chose=sc.nextInt();
+        }
+        while (chose==1);
+    }
+    public void display(LinkedList<Integer> lst)
+    {
+        System.out.println("List  element are  \n");
+        for (int j :lst)
+        {
+            System.out.print(j+" ");
+        }
+    }
+    public void addBOTH(LinkedList<Integer> lst1,LinkedList<Integer> lst2)
+    {
+
+       lst1.addAll(lst2);
+    }
+}
+public class CollecMain
+{
+    public static void main(String... PankajSharma)
+    {
+    ListImple obj=new ListImple();
+    LinkedList<Integer> lst1=new LinkedList<Integer>();
+    LinkedList<Integer> lst2=new LinkedList<Integer>();
+
+    obj.insert(lst1);
+    obj.display(lst1);
+//secound list are
+    obj.insert(lst2);
+    obj.display(lst2);
+    System.out.println("\n After add both list is  : : \n");
+    obj.addBOTH(lst1,lst2);
+    obj.display(lst1);
+    }
+
+}

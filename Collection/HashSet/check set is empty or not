@@ -1,0 +1,53 @@
+package collection;
+
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Scanner;
+
+class SetImple
+{
+        Scanner sc=new Scanner(System.in);
+    public void insert(HashSet st)
+    {
+        int chose=1;
+        do {
+            System.out.println("Enter value to inserted  : ");
+            st.add(sc.nextInt());
+            System.out.println("Enter 1 for more value  : ");
+            chose=sc.nextInt();
+        }while (chose==1);
+    }
+    public void display(HashSet st)
+    {
+        Iterator itr=st.iterator();
+        while (itr.hasNext())
+        {
+            System.out.print(itr.next()+ "  ");
+        }
+    }
+    public void checkSET(HashSet st)
+    {
+      if(st.isEmpty())
+      {
+          System.out.println("Empty hash Set ");
+          return;
+      }
+      else 
+          {
+              System.out.println("Not Emepty \n so you can perform opration on data : ");
+          }
+    }
+}
+public class CollecMain
+{
+    public static void main(String... PankajSharma)
+    {
+    SetImple obj=new SetImple();
+        HashSet st=new HashSet();
+        obj.insert(st);
+        obj.display(st);
+        obj.checkSET(st);
+    }
+
+}

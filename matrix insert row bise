@@ -1,0 +1,46 @@
+package matrix;
+
+import java.util.Scanner;
+class MatrixImpl
+{
+    Scanner sc=new Scanner(System.in);
+    public void insertValue(int[][] mtr ,int row,int col)
+    {
+        for (int i = 0; i <row ; i++)
+        {
+            System.out.println("Enter value of   :"+(i+1)+"th Row ");
+            for (int j = 0; j <col ; j++)
+            {
+                mtr[j][i]=sc.nextInt();
+            }
+        }
+    }
+    public void display(int[][] mtr,int row,int col)
+    {
+        for (int i = 0; i <row ; i++)
+        {
+            for (int j = 0; j <col ; j++)
+            {
+                System.out.print(mtr[i][j]+"  ");
+            }
+            System.out.println();
+        }
+    }
+}
+public class MatrixMain
+{
+    public static void main(String... PankajSharma)
+    {
+            MatrixImpl obj=new MatrixImpl();
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter row of matrix  : ");
+        int row=sc.nextInt();
+        System.out.println("Enter coloumn  of matrix : ");
+        int col=sc.nextInt();
+        int[][] mtr=new int[row][col];
+        System.out.println(mtr.length);
+        obj.insertValue(mtr,row,col);
+        obj.display(mtr,row,col);
+        System.out.println("Pankaj Sharma  :");
+    }
+}

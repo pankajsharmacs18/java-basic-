@@ -1,0 +1,68 @@
+package matrixImplement;
+
+import java.util.Scanner;
+
+class MtrxImple {
+    Scanner sc = new Scanner(System.in);
+
+
+    public void insertValue(int[][] mtr, int row, int col) {
+        System.out.println("enter  " + row * col + "  element int array  :");
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                mtr[i][j] = sc.nextInt();
+            }
+        }
+    }
+
+    public void display(int[][] mtr, int row, int col) {
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                System.out.print(mtr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public void addRow(int[][] mtr, int row, int col) {
+        for (int i = 0; i < row; i++) {
+            int sum = 0;
+            for (int j = 0; j < col; j++) {
+                sum = mtr[i][j] + sum;
+                System.out.print(mtr[i][j] + "  ");
+            }
+            System.out.print("= " + sum);
+            System.out.println();
+        }
+
+    }
+
+    public void addCol(int[][] mtr, int row, int col) {
+        for (int i = 0; i < row; i++)
+        {
+            int sum = 0;
+            for (int j = 0; j < col; j++)
+            {
+                sum = sum + mtr[j][i];
+            }
+            System.out.print(sum+" ");
+        }
+    }
+}
+public class MatrixMain
+{
+    public static void main(String... PankajSharma)
+    {
+        Scanner sc=new Scanner(System.in);
+        MtrxImple obj=new MtrxImple();
+        System.out.println("enter row and col size of matrix :");
+        int row=sc.nextInt();
+        int col=sc.nextInt();
+        int mtr[][] =new int[row][col];
+        obj.insertValue(mtr,row,col);
+        obj.display(mtr,row,col);
+        obj.addRow(mtr,row,col);
+        obj.addCol(mtr,row,col);
+        System.out.println("Pankaj Sharma : ");
+    }
+}

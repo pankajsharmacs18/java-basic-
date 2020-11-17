@@ -1,0 +1,38 @@
+package stringPractice;
+
+import java.util.Scanner;
+
+class StringImple
+{
+    public int coutnPuncMark(String str)
+    {
+        int count=0;
+        for (int i = 0; i <str.length() ; i++)
+        {
+            if (str.charAt(i)>='a' && str.charAt(i)<='z' || str.charAt(i)>='A'&& str.charAt(i)<='Z' ||str.charAt(i)>='0'&&str.charAt(i)<='9' )
+            {
+            continue;
+            }
+            else
+                {
+                    count++;
+                }
+
+        }
+        return count;
+    }
+}
+public class StringMain
+{
+    public static void main(String... PankajSharma)
+    {
+        Scanner sc=new Scanner(System.in);
+        StringImple obj=new StringImple();
+        System.out.println("Enter A String ");
+        String str=sc.nextLine();
+        System.out.println("Entered String is : "+str);
+        int c=obj.coutnPuncMark(str);
+        System.out.println("Punctuation Mark is : "+c);
+        System.out.println("Pankaj Sharma : ");
+    }
+}

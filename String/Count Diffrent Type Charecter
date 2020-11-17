@@ -1,0 +1,53 @@
+package stringPractice;
+
+import java.util.Scanner;
+
+class StringImple
+{
+    public void countChar(String str)
+    {
+        int dig=0;
+        int sml=0;
+        int cpl=0;
+        int sps=0;
+        for (int i = 0; i <str.length() ; i++)
+        {
+            if (str.charAt(i)>='0' && str.charAt(i)<='9' )
+            {
+            dig++;
+            }
+            else  if(str.charAt(i)>='a'&& str.charAt(i)<='z')
+            {
+                sml++;
+            }
+            else if(str.charAt(i)>='A' && str.charAt(i)<='Z')
+            {
+                cpl++;
+            }
+            else if(str.charAt(i)==' ')
+            {
+                sps++;
+            }
+        }
+        System.out.println("space is "+sps);
+        System.out.println("Digit is : "+dig);
+        System.out.println("Capital Letter is "+cpl);
+        System.out.println("Small Letter is "+sml);
+        int punc=str.length()-(sps+cpl+sml+dig);
+        System.out.println("Special Charecter is "+punc);
+    }
+}
+public class StringMain
+{
+    public static void main(String... PankajSharma)
+    {
+        Scanner sc=new Scanner(System.in);
+        StringImple obj=new StringImple();
+        System.out.println("Enter A String ");
+        String str=sc.nextLine();
+        System.out.println("Entered String is : "+str);
+        obj.countChar(str);
+
+        System.out.println("Pankaj Sharma : ");
+    }
+}

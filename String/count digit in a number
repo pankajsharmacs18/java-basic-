@@ -1,0 +1,34 @@
+package stringPractice;
+
+import java.util.Scanner;
+
+class StringImple
+{
+    public int countDigit(String str)
+    {
+        int count=0;
+        for (int i = 0; i <str.length() ; i++)
+        {
+            if (str.charAt(i)>='0' && str.charAt(i)<='9' )
+            {
+            count++;
+            }
+
+        }
+        return count;
+    }
+}
+public class StringMain
+{
+    public static void main(String... PankajSharma)
+    {
+        Scanner sc=new Scanner(System.in);
+        StringImple obj=new StringImple();
+        System.out.println("Enter A String ");
+        String str=sc.nextLine();
+        System.out.println("Entered String is : "+str);
+        int c=obj.countDigit(str);
+        System.out.println("Digit  is : "+c);
+        System.out.println("Pankaj Sharma : ");
+    }
+}

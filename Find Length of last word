@@ -1,0 +1,38 @@
+package String;
+
+import java.util.Scanner;
+
+class StringImpleMent
+{
+public int  findLast(String str)
+{
+    int Wlen=0;
+   if (str.length()==0)
+   {
+       return 0;
+   }
+   int strlen=str.length();
+   int i=0;
+   while (strlen>0 &&str.charAt(strlen-1)!=' ')
+   {
+       Wlen++;
+       strlen--;
+   }
+   return Wlen;
+}
+}
+
+public class StringMain
+{
+    public static void main(String... PankajSharma)
+    {
+            StringImpleMent obj=new StringImpleMent();
+            Scanner sc=new Scanner(System.in);
+        System.out.println("Enter String ");
+        String str=sc.nextLine();
+        System.out.println("Entered String is : "+str);
+        int l=obj.findLast(str);
+        System.out.println("lenth of  last  word "+l);
+        System.out.println("Pankaj Sharma ");
+    }
+}

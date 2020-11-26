@@ -1,0 +1,39 @@
+package String;
+
+import java.util.Scanner;
+
+class StringImpleMent
+{
+
+    public void replaceIsByIsNOT(String str)
+    {
+
+
+            if (str.contains("is"))
+            {
+               str= str.replaceAll("is","is not");
+
+            };
+        System.out.println("str = "+str);
+
+
+    }
+
+}
+
+public class StringMain
+{
+    public static void main(String... PankajSharma)
+    {
+            StringImpleMent obj=new StringImpleMent();
+            Scanner sc=new Scanner(System.in);
+        System.out.println("Enter String ");
+        String str=sc.nextLine();
+        System.out.println("Entered String is : "+str);
+
+        obj.replaceIsByIsNOT(str);
+        System.out.println("String after chnage : "+str);
+
+        System.out.println("Pankaj Sharma ");
+    }
+}

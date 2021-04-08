@@ -1,0 +1,51 @@
+package collectionPractice;
+
+import java.util.*;
+
+class CollImple
+{
+    Scanner sc=new Scanner(System.in);
+
+    public void insert(ArrayList<String> arr)
+    {
+        int i=0;
+        do {
+            System.out.println("Enter color name : ");
+                String clr=sc.next();
+                arr.add(clr);
+            System.out.println("Enter 1 for more value : ");
+                i=sc.nextInt();
+        }while (i==1);
+    }
+    public void display(ArrayList<String> arr)
+    {
+        Iterator<String> itr=arr.iterator();
+        while (itr.hasNext())
+        {
+            System.out.print(itr.next()+" ");
+        }
+    }
+    public void sortCollection(ArrayList<String> arr)
+    {
+        if (arr.isEmpty())
+        {
+            System.out.println("Can't sort : ");
+            return;
+        }
+        Collections.sort(arr);
+    }
+}
+public class CollMain
+{
+    public static void main(String... PankajSharma)
+    {
+        CollImple obj=new CollImple();
+        ArrayList<String> arr=new ArrayList<String>();
+        obj.insert(arr);
+        obj.display(arr);
+        obj.sortCollection(arr);
+        System.out.println("After Sorting Collection : ");
+        obj.display(arr);
+        System.out.println("Pankaj sharma : ");
+    }
+}

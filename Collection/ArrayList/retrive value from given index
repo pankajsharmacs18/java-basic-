@@ -1,0 +1,64 @@
+package collectionPractice;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Scanner;
+
+class CollImple
+{
+    Scanner sc=new Scanner(System.in);
+
+    public void insert(ArrayList<String> arr)
+    {
+        int i=0;
+        do {
+            System.out.println("Enter color name : ");
+                String clr=sc.next();
+                arr.add(clr);
+            System.out.println("Enter 1 for more value : ");
+                i=sc.nextInt();
+        }while (i==1);
+    }
+    public void display(ArrayList<String> arr)
+    {
+        Iterator<String> itr=arr.iterator();
+        while (itr.hasNext())
+        {
+            System.out.print(itr.next()+" ");
+        }
+    }
+    public void insertAtIndex(ArrayList<String> arr)
+    {
+        System.out.println("Enter index where value will be inserted : ");
+        int a=sc.nextInt();
+        System.out.println("Enter Name  of color ");
+        String clr=sc.next();
+        arr.add(a,clr);
+    }
+public void retriveElement(ArrayList<String> arr)
+{
+    System.out.println("Enter Index Value to be retrive : ");
+    int idx=sc.nextInt();
+    if (idx>arr.size())
+    {
+        System.out.println("You entered wrong value  ; ");
+        retriveElement(arr);
+    }
+    System.out.println("Value at index "+idx+" is : "+arr.get(idx-1a));
+}
+}
+public class CollMain
+{
+    public static void main(String... PankajSharma)
+    {
+        CollImple obj=new CollImple();
+        ArrayList<String> arr=new ArrayList<String>();
+        obj.insert(arr);
+        obj.display(arr);
+       obj.retriveElement(arr);
+        // obj.insertAtIndex(arr);
+       // System.out.println("After Insert Value ");
+        obj.display(arr);
+        System.out.println("Pankaj sharma : ");
+    }
+}

@@ -1,0 +1,51 @@
+package collectionPractice;
+
+import java.util.*;
+
+class CollImple
+{
+    Scanner sc=new Scanner(System.in);
+
+
+    public void insertValue(LinkedList<String> lst)
+    {
+        int i=0;
+        do {
+            System.out.println("Enter value to insert ");
+            String str=sc.next();
+            lst.add(str);
+            System.out.println("Enter 1 for more value : ");
+            i=sc.nextInt();
+        }while (i==1);
+    }
+    public void display(LinkedList<String> lst)
+    {
+        Iterator<String> itr=lst.iterator();
+        while (itr.hasNext())
+        {
+            System.out.print(itr.next()+" ");
+        }
+    }
+public void insertAtPosition(LinkedList<String> lst)
+{
+    System.out.println("Enter Position ");
+    int idx=sc.nextInt();
+    System.out.println("Enter value to insered ");
+    String clr=sc.next();
+    lst.add(idx,clr);
+}
+}
+public class CollMain
+{
+    public static void main(String... PankajSharma)
+    {   CollImple obj=new CollImple();
+        LinkedList <String> lst=new LinkedList<String>();
+        obj.insertValue(lst);
+        obj.display(lst);
+        obj.insertAtPosition(lst);
+        obj.display(lst);
+        
+        System.out.println("Pankaj sharma : ");
+
+    }
+}

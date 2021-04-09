@@ -1,0 +1,37 @@
+package practice;
+
+import java.util.Scanner;
+
+class StringImple
+{
+ public void checkOcurence(String str)
+ {
+     int[] count=new int[256];
+     for (int i = 0; i < str.length(); i++)
+     {
+     count[str.charAt(i)]++;
+     }
+     for (int i = 0; i <str.length() ; i++)
+     {
+         System.out.println(str.charAt(i)+"  "+count[str.charAt(i)]);
+
+         }
+     
+ }
+
+}
+public class StringMain
+{
+    public static void main(String... PankajSharma)
+    {
+        StringImple obj=new StringImple();
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a string : ");
+        String str=sc.next();
+        System.out.println("Entered string : "+str);
+        obj.checkOcurence(str);
+
+        System.out.println("Pankaj Sharma : ");
+    }
+}
+

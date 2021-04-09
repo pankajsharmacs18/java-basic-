@@ -1,0 +1,70 @@
+package practice;
+
+import java.util.Scanner;
+
+class StringImple
+{
+    int[] count=new int[256];
+ public void countOcurence(String str)
+ {
+
+     for (int i = 0; i < str.length(); i++)
+     {
+     count[str.charAt(i)]++;
+     }//
+ }
+ public void checkAnagrame(String str1,String str2)
+ {  int[] s1=new int[256];
+    int[] s2=new int[256];
+     if (str1.length()!=str2.length())
+     {
+         System.out.println("Not anagrame :");
+         return;
+     }
+     for (int i = 0; i <str1.length() ; i++)
+     {
+     s1[str1.charAt(i)]++;
+     }
+     for (int i = 0; i <str2.length() ; i++)
+     {
+     s2[str2.charAt(i)]++;
+     }
+     boolean an=true;
+     for (int i = 0; i <s1.length ; i++)
+     {
+         if (s1[i]!=s2[i])
+         {
+             an=false;
+         }
+     }
+     if (an)
+     {
+         System.out.println("String is anagrame : ");
+
+     }
+     else
+         {
+             System.out.println("String is not anagrame : ");
+
+         }
+ }
+
+}
+public class StringMain
+{
+    public static void main(String... PankajSharma)
+    {
+        StringImple obj=new StringImple();
+        Scanner sc=new Scanner(System.in);
+
+        System.out.println("Enter 1st string : ");
+        String s1=sc.nextLine();
+        System.out.println("Enter 2nd string to be checked : ");
+        String str2=sc.nextLine();
+        System.out.println("1st string : "+s1);
+        System.out.println("2nd string is "+str2);
+        obj.checkAnagrame(s1,str2);
+        System.out.println("Pankaj Sharma : ");
+    }
+}
+

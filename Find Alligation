@@ -1,0 +1,33 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter price of first Quantity ");
+        int x=sc.nextInt();
+        System.out.println("Enter Price of 2nd Quantity "):
+        int y=sc.nextInt();
+        System.out.println("Enter Means Price");
+        int z=sc.nextInt();
+        
+        int c=(x<=y)?x:y;
+        int d=(x>y)?x:y;
+        c=z-c;
+        d=d-z;
+        int div=0;
+        for(int i=1;i<=c;i++)
+        {
+            if(c%i==0 && d%i==0)
+            {
+               div=i;
+            }
+        }
+        d=d/div;
+        c=c/div;
+        System.out.println(d+":"+c);
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}

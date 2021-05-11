@@ -1,0 +1,42 @@
+package javaPractice;
+
+import java.util.Scanner;
+
+class JavaImple
+{
+    public void atmoshophoricNo(int n)
+    {
+     String sq=String.valueOf(n*n);
+     String num=String.valueOf(n);
+     int j=sq.length()-1;
+     boolean res=true;
+        for (int i = num.length()-1; i >=0 ; i--)
+        {
+         if (num.charAt(i)!=sq.charAt(j))
+         {
+             res=false;
+         }
+         j--;
+        }
+        if (res)
+        {
+            System.out.println("Atmoshoric Number ");
+        }
+        else
+            {
+                System.out.println("Not a Atmosphoric Number ");
+            }
+    }
+}
+public class JavaMain
+{
+    public static void main(String... PankaJSharma)
+    {
+        Scanner sc=new Scanner(System.in);
+        JavaImple obj=new JavaImple();
+        System.out.println("Enter a number to be checked : ");
+        int n=sc.nextInt();
+        obj.atmoshophoricNo(n);
+        System.out.println("Pankaj Sharma");
+    }
+}

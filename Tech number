@@ -1,0 +1,40 @@
+package javaPractice;
+
+import java.util.Scanner;
+
+class JavaImple
+{
+    public void techNumber(int n)
+    {
+     String num = String.valueOf(n);
+     if (num.length()%2!=0)
+     {
+         System.out.println("Not a tech Number " );
+         return;
+     }
+     int n1=Integer.parseInt(num.substring(0,num.length()/2));
+     int n2=Integer.parseInt(num.substring(num.length()/2,num.length()));
+        n1+=n2;
+        if ((n1*n1)==n)
+        {
+            System.out.println("Tech Number : ");
+        }
+        else
+            {
+                System.out.println("Not A Number : ");
+            }
+    }
+
+}
+public class JavaMain
+{
+    public static void main(String... PankaJSharma)
+    {
+        Scanner sc=new Scanner(System.in);
+        JavaImple obj=new JavaImple();
+        System.out.println("Enter a number to be checked : ");
+        int n=sc.nextInt();
+        obj.techNumber(n);
+        System.out.println("Pankaj Sharma");
+    }
+}

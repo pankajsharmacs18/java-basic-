@@ -1,0 +1,49 @@
+package javaPractice;
+
+import java.util.Scanner;
+
+class JavaImple
+{
+   public void petersion(int n)
+   {
+       int temp=n;
+       int sum=0;
+       int fact=1;
+       while (temp!=0)
+       {
+           fact=1;
+           int p=temp%10;
+           for (int i = 1; i <=p ; i++)
+           {
+           fact=fact*i;
+           }
+           sum+=fact;
+           temp=temp/10;
+       }
+       if (sum==n)
+       {
+           System.out.println("Peterson Number : ");
+       }
+       else
+           {
+               System.out.println("Not a peterson Number : ");
+           }
+   }
+   public void sunny(int n)
+   {
+
+   }
+
+}
+public class JavaMain
+{
+    public static void main(String... PankaJSharma)
+    {
+        Scanner sc=new Scanner(System.in);
+        JavaImple obj=new JavaImple();
+        System.out.println("Enter a number to be checked : ");
+        int n=sc.nextInt();
+        obj.petersion(n);
+        System.out.println("Pankaj Sharma");
+    }
+}

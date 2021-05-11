@@ -1,0 +1,33 @@
+package javaPractice;
+
+import java.util.Scanner;
+
+class JavaImple
+{
+   public void sunny(int n)
+   {
+        int s= (int) Math.sqrt(n+1);
+        if ((s*s)==(n+1))
+        {
+            System.out.println("Sunny Number : ");
+        }
+        else
+        {
+             System.out.println("Not a Sunny A number ");
+        }
+
+   }
+
+}
+public class JavaMain
+{
+    public static void main(String... PankaJSharma)
+    {
+        Scanner sc=new Scanner(System.in);
+        JavaImple obj=new JavaImple();
+        System.out.println("Enter a number to be checked : ");
+        int n=sc.nextInt();
+        obj.sunny(n);
+        System.out.println("Pankaj Sharma");
+    }
+}

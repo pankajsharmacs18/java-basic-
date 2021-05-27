@@ -1,0 +1,53 @@
+package collectionPractice;
+
+import javax.security.sasl.SaslClient;
+import java.util.*;
+
+class ColleImple
+{
+    Scanner sc=new Scanner(System.in);
+    public void insert(LinkedList<String> llst)
+    {
+        int c=0;
+        do {
+            System.out.println("Enter value to be insert");
+            llst.add(sc.next());
+            System.out.println("Enter 1 for more value : ");
+            c=sc.nextInt();
+        }while (c==1);
+    }
+    public void reverseList(LinkedList<String> llst)
+    {
+        if (llst.isEmpty())
+        {
+            System.out.println("List can't ereivese : ");
+            return;
+        }
+        Collections.reverse(llst);
+    }
+    public void displayIteraot(LinkedList<String> llst)
+
+    {
+        Iterator<String> itr=llst.iterator();
+        while (itr.hasNext())
+        {
+            System.out.print(itr.next()+" ");
+        }
+    }
+
+}
+public class CollectionMain
+{
+    public static void main(String... PankajSharma)
+    {
+        Scanner sc=new Scanner(System.in);
+        ColleImple obj=new ColleImple();
+        LinkedList<String> list=new LinkedList<>();
+        obj.insert(list);
+        obj.displayIteraot(list);
+        obj.reverseList(list);
+        System.out.println("\n After reverse   Element \n");
+        obj.displayIteraot(list);
+        System.out.println("Pankaj Sharma ");
+    }
+}

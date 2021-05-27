@@ -1,0 +1,49 @@
+package collectionPractice;
+
+import javax.security.sasl.SaslClient;
+import java.util.*;
+
+class ColleImple
+{
+    Scanner sc=new Scanner(System.in);
+    public void insert(LinkedList<String> llst)
+    {
+        int c=0;
+        do {
+            System.out.println("Enter value to be insert");
+            llst.add(sc.next());
+            System.out.println("Enter 1 for more value : ");
+            c=sc.nextInt();
+        }while (c==1);
+    }
+    public void copyList(LinkedList<String> llist)
+    {
+        LinkedList<String> cl=new LinkedList<>(llist);
+        System.out.println(cl);
+    }
+    public void displayIteraot(LinkedList<String> llst)
+
+    {
+        Iterator<String> itr=llst.iterator();
+        while (itr.hasNext())
+        {
+            System.out.print(itr.next()+" ");
+        }
+    }
+
+}
+public class CollectionMain
+{
+    public static void main(String... PankajSharma)
+    {
+        Scanner sc=new Scanner(System.in);
+        ColleImple obj=new ColleImple();
+        LinkedList<String> list=new LinkedList<>();
+        obj.insert(list);
+        obj.displayIteraot(list);
+        obj.copyList(list);
+        System.out.println("After sorting  Element \n");
+        obj.displayIteraot(list);
+        System.out.println("Pankaj Sharma ");
+    }
+}

@@ -1,0 +1,54 @@
+package datastructure;
+
+import java.util.*;
+
+class MapImple
+{
+    Scanner sc=new Scanner(System.in);
+    public  void insertVal(Map map)
+    {
+        int c=0;
+        do {
+            System.out.println("Enter name of key : ");
+            String key=sc.next();
+            System.out.println("Enter value to be insert  ");
+            String val=sc.next();
+            map.put(key,val);
+            System.out.println("Enter 1 for more value : ");
+            c=sc.nextInt();
+        }while (c==1);
+    }
+    public void removeMapping(Map map)
+    {
+        if (map.isEmpty())
+        {
+            System.out.println("Map is allready Empty : ");
+            return;
+        }
+        map.clear();
+        System.out.println("Mpaed is Empty : ");
+    }
+    public void display(Map map)
+    {
+        Set set=map.entrySet();
+        Iterator itr=set.iterator();
+
+        while (itr.hasNext())
+        {
+            Map.Entry ent=(Map.Entry)itr.next();
+            System.out.println(ent.getKey()+" "+ent.getValue());
+        }
+    }
+}
+public class DSmain
+{
+    public static void main(String...  PankajSharma )
+    {
+        Scanner sc=new Scanner(System.in);
+        MapImple obj=new MapImple();
+        Map map=new HashMap();
+        obj.insertVal(map);
+        obj.display(map);
+        System.out.println("PankajSharma");
+    }
+}

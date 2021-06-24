@@ -1,0 +1,38 @@
+package stringPract;
+
+import java.util.Scanner;
+
+class StringImple
+{
+    public void caseFordString(String str)
+    {
+        StringBuilder res= new StringBuilder();
+        for (int i = 0; i <str.length() ; i++) {
+            if (Character.isLowerCase(str.charAt(i))) {
+                res.append(Character.toUpperCase(str.charAt(i)));
+            } else if (Character.isUpperCase(str.charAt(i))) {
+                res.append(Character.toLowerCase(str.charAt(i)));
+            } else {
+                res.append(i);
+            }
+        }
+        System.out.println("CaseFolded String : "+res);
+    }
+
+
+}
+public class StringMain
+{
+    public static void main(String... PankajSharma)
+    {
+        Scanner sc=new Scanner(System.in);
+        StringImple obj=new StringImple();
+        System.out.println("Entrer String " );
+        String str=sc.nextLine();
+        System.out.println("Enter String is "+str);
+        obj.caseFordString(str);
+        System.out.println("Pankaj Sharma");
+    }
+
+
+}

@@ -1,0 +1,35 @@
+package stringPract;
+
+import java.util.Scanner;
+
+class StringImple
+{
+    public String removeSpace(String str)
+    {   if (str.isEmpty())
+        return "String is String ";
+            String res="";
+        for (int i = 0; i <str.length() ; i++)
+        {
+        if (str.charAt(i)!=' ')
+        {
+            res=res+str.charAt(i);
+        }
+
+        }
+        return res;
+    }
+}
+public class StringMain
+{
+    public static void main(String... PankajSharma)
+    {
+        Scanner sc=new Scanner(System.in);
+        StringImple obj=new StringImple();
+        System.out.println("Entrer String " );
+        String str=sc.nextLine();
+        System.out.println("Enter String is "+str+" \n after remove space is : "+obj.removeSpace(str));
+        System.out.println("Pankaj Sharma");
+    }
+
+
+}

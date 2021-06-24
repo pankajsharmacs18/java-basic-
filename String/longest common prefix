@@ -1,0 +1,72 @@
+package stringPract;
+
+import java.util.Scanner;
+import java.util.Stack;
+
+class StringImple
+{   Scanner sc=new Scanner(System.in);
+    public void insertAString(String[] str)
+    {
+        System.out.println("Enter String in Arrays  ");
+        for (int i = 0; i < str.length; i++)
+        {
+          str[i]=sc.next();
+        }
+
+    }
+    public void display(String[] str)
+    {
+        for (String s : str) {
+            System.out.print(s + " ");
+        }
+    }
+    public void longestOccurence(String[] str)
+    {
+        if (str.length==0 || str==null)
+        {
+            System.out.println("String is Empty ! so we can't perform ");
+            return;
+        }
+        int s=str[0].length();
+        for (int i = 1; i < str.length; i++)
+        {
+        s=Math.min(s,str[i].length());
+        }
+        StringBuilder c=new StringBuilder(str[0].substring(0,s));
+
+        int i=1;
+        while (i<str.length && c.length()!=0)
+        {
+            if (str[i].substring(0,c.length()).equals(c.toString()))
+            {
+               i++;
+            }
+            else
+                {
+                    c.deleteCharAt(c.length()-1);
+                }
+        }
+        if (c.length()==0)
+        {
+            System.out.println("Not common ");
+            return;
+        }
+        System.out.println("Longest Prefix is "+c);
+    }
+}
+public class StringMain
+{
+    public static void main(String... PankajSharma)
+    {
+        Scanner sc=new Scanner(System.in);
+        StringImple obj=new StringImple();
+        System.out.println("Enter size of arrays ");
+        String[] str=new String[sc.nextInt()];
+        obj.insertAString(str);
+        obj.longestOccurence(str);
+        obj.display(str);
+
+    }
+
+
+}

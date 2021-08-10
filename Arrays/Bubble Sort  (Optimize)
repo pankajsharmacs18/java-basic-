@@ -1,0 +1,64 @@
+package searchPract;
+
+import java.util.Scanner;
+
+class ArraysImple
+{
+    Scanner sc=new Scanner(System.in);
+    public void insertVal(int[] arr)
+    {
+        System.out.println("Enter value to be insert ");
+        for (int i = 0; i < arr.length; i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+    }
+    public void bubbleSort(int[] arr)
+    {
+        boolean swap=false;
+        for (int i = 0; i <arr.length; i++)
+        {
+            swap=false;
+            for (int j = 0; j <arr.length-i-1 ; j++)
+            {
+            if (arr[j]>arr[j+1])
+            {
+                int temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+                swap=true;
+            }
+            }
+            if (!swap)
+            {
+                break;
+            }
+
+        }
+    }
+    public void display(int[] arr)
+    {
+        for (int i = 0; i <arr.length; i++)
+        {
+            System.out.print(arr[i]+" ");
+        }
+    }
+}
+public class SeacrhMin
+{
+    public static void main(String... PankaJSharma)
+    {
+        Scanner sc=new Scanner(System.in);
+        ArraysImple obj=new ArraysImple();
+        System.out.println("Enter size of arrays : ");
+        int n=sc.nextInt();
+        int[] arr=new int[n];
+        obj.insertVal(arr);
+        System.out.println("Entered arrays is ");
+        obj.display(arr);
+        obj.bubbleSort(arr);
+        System.out.println("Arrays after swap ! ");
+        obj.display(arr);
+        System.out.println("Pankaj Sharma!");
+    }
+}
